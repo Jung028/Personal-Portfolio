@@ -56,7 +56,13 @@ export const Banner = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Adam Lim`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "AI/ML Developer", "Data Scientist", "Full Stack Developer" ]'><span className="wrap">{text}</span></span></h1>
+                <h1>
+                    {`Hi! I'm Adam Lim`} 
+                    <br />  {/* This creates a line break */}
+                    <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "AI/ML Developer", "Data Scientist", "Full Stack Developer" ]'>
+                      <span className="wrap">{text}</span>
+                    </span>
+                  </h1>
                   <p>Hi! I'm Adam Lim, a data and AI enthusiast passionate about machine learning, predictive analytics, and automation. With experience in data science, deep learning, and full-stack development, I specialize in extracting insights from complex datasets to drive intelligent decision-making. From predictive maintenance to NLP-driven applications, I love building AI-powered solutions that create real-world impact.</p>
                   <button onClick={() => window.location.href = 'https://www.linkedin.com/in/adam-lim-4247481a5/'}> Let’s Connect <ArrowRightCircle size={25} /></button>
               </div>}
