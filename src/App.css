@@ -102,7 +102,7 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   color: #fff !important;
   letter-spacing: 0.8px;
   padding: 0 25px;
-  font-size: 18px;
+  font-size: 16px;
   opacity: 0.75;
 }
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
@@ -155,7 +155,7 @@ span.navbar-text {
   color: #fff;
   border: 1px solid #fff;
   padding: 18px 34px;
-  font-size: 18px;
+  font-size: 16px;
   margin-left: 18px;
 	position: relative;
 	background-color: transparent;
@@ -245,12 +245,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 8px 10px;
   background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
   border: 1px solid rgba(255, 255, 255, 0.5);
-  font-size: 20px;
+  font-size: 16px;
   margin-bottom: 16px;
   display: inline-block;
 }
 .banner h1 {
-  font-size: 65px;
+  font-size: 45px;
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1;
@@ -259,7 +259,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .banner p {
   color: #B8B8B8;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   width: 96%;
@@ -267,14 +267,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner button {
   color: #fff;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 16px;
   margin-top: 60px;
   letter-spacing: 0.8px;
   display: flex;
   align-items: center;
 }
 .banner button svg {
-  font-size: 25px;
+  font-size: 16px;
   margin-left: 10px;
   transition: 0.3s ease-in-out;
   line-height: 1;
@@ -302,54 +302,210 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 
 
-/************ Experience Section Styles ************/
-.experience {
+
+
+.about-me {
   padding: 80px 0;
+  background-color: #0d0d0d;
+  color: rgb(0, 0, 0);
+}
+
+.about-me-intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-me-intro h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.about-me-intro p {
+  font-size: 1.1rem;
+  color: #b8b8b8;
+  margin-top: 10px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.about-me-intro .tagline {
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 8px 10px;
+  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.about-me-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+  flex-wrap: nowrap; /* Prevent wrapping until media query triggers */
+}
+
+/* Left: 30% width */
+.about-me-left {
+  width: 30%;
+  min-width: 250px;
+}
+
+/* Right: 70% width */
+.about-me-right {
+  width: 70%;
+}
+
+/* Keep card styling */
+.card-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  padding: 2rem;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 30px rgba(160, 100, 255, 0.1);
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+  .about-me-container {
+    flex-direction: column;
+  }
+
+  .about-me-left,
+  .about-me-right {
+    width: 100%;
+  }
+}
+
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-badge {
+  background: linear-gradient(135deg, #AA367C, #4A2FBD);
+  color: rgb(0, 0, 0);
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Right side (Experience + Education) */
+.about-me-right {
+  flex: 1 1 70%;
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 20px; /* Space between buttons and content */
+}
+
+.toggle-btn {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.toggle-btn:hover {
+  background-color: #AA367C;
+  color: #fff;
+}
+
+.toggle-btn.active {
+  background-color: #4A2FBD;
+  color: #fff;
+}
+
+/* Cards Container */
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between cards */
+}
+
+
+
+/* Responsive layout for smaller screens */
+@media (max-width: 992px) {
+  .about-me-container {
+    flex-direction: column;
+  }
+
+  .about-me-left, .about-me-right {
+    flex: 1 1 100%;
+  }
+}
+
+
+
+/************ Experience, Education, Competition Section Styles ************/
+.eec {
+  padding: 20px 0;
   position: relative;
   color: white;
+  text-align: left; /* Ensure all content aligns left */
 }
 
-.experience h2, h4, h5{
-  font-size: 45px;
+.eec h2, h4, h5 {
+  font-size: 36px;
   font-weight: 700;
-  text-align: center;
+  text-align: left; /* Align headings to the left */
 }
 
-.experience p {
+.eec p {
   color: #B8B8B8;
-  font-size: 18px;
+  font-size: 14px;
   letter-spacing: 0.8px;
-  line-height: 1.5em;
-  margin: 14px auto 30px;
-  text-align: center;
-  width: 56%;
+  line-height: 1.4em;
+  text-align: left; /* Align text to the left */
+  width: 60%;
 }
 
-.experience .nav-pills {
-  width: 72%;
+.eec .nav-pills {
+  width: 60%;
   margin: 0 auto;
   border-radius: 50px;
   background-color: rgb(255 255 255 / 10%);
   overflow: hidden;
 }
 
-.experience .nav-pills .nav-item {
+.eec .nav-pills .nav-item {
   width: 33.33333%;
 }
 
-.experience .nav-pills .nav-link {
+.eec .nav-pills .nav-link {
   background-color: transparent;
   border-radius: 0;
-  padding: 17px 0;
+  padding: 12px 0;
   color: #fff;
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 500;
-  text-align: center;
+  text-align: left; /* Align nav links to the left */
   z-index: 0;
   transition: 0.3s ease-in-out;
 }
 
-.experience .nav-pills .nav-link::before {
+.eec .nav-pills .nav-link::before {
   content: "";
   position: absolute;
   width: 0;
@@ -361,37 +517,37 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transition: 0.3s ease-in-out;
 }
 
-.experience .nav-pills .nav-link.active::before {
+.eec .nav-pills .nav-link.active::before {
   width: 100%;
 }
 
-.experience .nav-pills .nav-link.active {
+.eec .nav-pills .nav-link.active {
   border: 1px solid rgba(255, 255, 255, 1);
 }
 
-.nav-link#experiences-tabs-tab-first {
+.nav-link#eecs-tabs-tab-first {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 55px 0px 0px 55px;
 }
 
-.nav-link#experiences-tabs-tab-second {
+.nav-link#eecs-tabs-tab-second {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.nav-link#experiences-tabs-tab-third {
+.nav-link#eecs-tabs-tab-third {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 0 55px 55px 0;
 }
 
-.exp-imgbx {
+.eec-imgbx {
   position: relative;
-  border-radius: 30px;
+  border-radius: 20px;
   overflow: hidden;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
-.exp-imgbx::before {
+.eec-imgbx::before {
   content: "";
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
   opacity: 0.85;
@@ -401,41 +557,41 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transition: 0.4s ease-in-out;
 }
 
-.exp-imgbx:hover::before {
+.eec-imgbx:hover::before {
   height: 100%;
 }
 
-.exp-txtx {
+.eec-txtx {
   position: absolute;
-  text-align: center;
+  text-align: left;
   top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 10%;
+  transform: translate(-10%, -50%);
   transition: 0.5s ease-in-out;
   opacity: 0;
-  width: 100%;
+  width: 80%;
 }
 
-.exp-imgbx:hover .exp-txtx {
+.eec-imgbx:hover .eec-txtx {
   top: 50%;
   opacity: 1;
 }
 
-.exp-txtx h4 {
-  font-size: 30px;
+.eec-txtx h4 {
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.8px;
 }
 
-.exp-txtx span {
+.eec-txtx span {
   font-style: italic;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 13px;
   letter-spacing: 0.8px;
 }
 
 .background-image-right {
-  top: 20%;
+  top: 15%;
   position: absolute;
   bottom: 0;
   width: 35%;
@@ -447,25 +603,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .timeline-card {
   background: rgba(255, 255, 255, 0.05); /* 5% white background for transparency */
   backdrop-filter: blur(5px); /* Apply slight blur to background */
-  padding: 1.5rem; /* Equivalent to p-6 in Tailwind */
+  padding: 1.2rem; /* Adjust padding if necessary */
   border-radius: 1rem; /* Equivalent to rounded-xl in Tailwind */
   border: 1px solid rgba(255, 255, 255, 0.1); /* Light border with opacity */
   color: white;
   box-shadow: 0 5px 30px rgba(160, 100, 255, 0.2);
   transition: all 0.3s ease-in-out; /* Smooth transition */
   overflow: hidden;
-  margin-bottom: 20px; /* Adds space between the cards */
+  margin-bottom: 16px; /* Reduced bottom margin */
+  width: 100%; /* Set card width to 100% */
 }
 
-/* Hover effects */
+
 .timeline-card:hover {
-  border-color: rgba(76, 134, 249, 0.5); /* Light blue hover border */
-  transform: translateY(-4px); /* Slight upward movement on hover */
+  border-color: rgba(76, 134, 249, 0.5);
+  transform: translateY(-4px);
 }
-
 
 .timeline-header {
-  text-align: center;
+  text-align: left;
 }
 
 .timeline-header h4, .timeline-header h5 {
@@ -496,9 +652,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .timeline-details li {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
-
 
 ul {
   list-style-type: disc;
@@ -537,12 +692,12 @@ ul {
   margin-top: -60px;
 }
 .skill h2 {
-	font-size: 45px;
+	font-size: 35px;
 	font-weight: 700;
 }
 .skill p {
     color: #B8B8B8;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 0.8px;
     line-height: 1.5em;
     margin: 14px 0 75px 0;
